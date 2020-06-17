@@ -1,0 +1,909 @@
+{
+	"info": {
+		"_postman_id": "1d75182e-ce5d-45c7-bd0e-1b14904746c6",
+		"name": "mysocialnetwork",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "surveys",
+			"item": [
+				{
+					"name": "localhost:3000/survey/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"les chevaux sauvages\",\r\n  \"group_id\": \"5e66927a24ef3931fb1cfd7b\",\r\n  \"creator_id\": \"5e66792262a6c52f67b3d9d6\",\r\n  \"questions\": [{\r\n      \"title\": \"Mes puces de companie ne me respectent oas, que faire?\",\r\n      \"responces\": [\r\n      \t{\"title\": \"les massacrer\"}, \r\n        {\"title\": \"jouer un peu plus avec\"}],\r\n      \"participants\": [{\r\n          \"user_id\": \"5e66792262a6c52f67b3d9d6\"\r\n\t\t}]\r\n    }]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/survey/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"survey",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/survey/show/5e669e40ec27543319bc0895",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/survey/show/5e669efbec27543319bc089a",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"survey",
+								"show",
+								"5e669efbec27543319bc089a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/survey/update/5e669efbec27543319bc089a",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"les canards sauvages\",\r\n  \"group_id\": \"5e66927a24ef3931fb1cfd7b\",\r\n  \"creator_id\": \"5e66792262a6c52f67b3d9d6\",\r\n  \"questions\": [{\r\n      \"title\": \"Mes puces de companie ne me respectent pas, que faire?\",\r\n      \"responces\": [\r\n      \t{\"title\": \"les massacrer\"}, \r\n        {\"title\": \"jouer un peu plus avec\"}],\r\n      \"participants\": [{\r\n          \"user_id\": \"5e66792262a6c52f67b3d9d6\"\r\n\t\t}]\r\n    },\r\n    {\r\n      \"title\": \"Mon chien est un carabistouilleur car il pisse sur la tapisserie de mamie\",\r\n      \"responces\": [\r\n      \t{\"title\": \"oui\"}, \r\n        {\"title\": \"non\"}],\r\n      \"participants\": [{\r\n          \"user_id\": \"5e66792262a6c52f67b3d9d6\"\r\n\t\t}]\r\n    }]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/survey/update/5e669e40ec27543319bc0895",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"survey",
+								"update",
+								"5e669e40ec27543319bc0895"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/survey/delete/5e669efbec27543319bc089a",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/survey/delete/5e669efbec27543319bc089a",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"survey",
+								"delete",
+								"5e669efbec27543319bc089a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/survey/list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/survey/list",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"survey",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "localhost:3000/user/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"first_name\": \"Dupont\",\n\t\"last_name\": \"Dupont\",\n\t\"email\": \"xzen769@gmzzzzzzzzzzzzzail.com\",\n\t\"password\": \"123456789\",\n\t\"age\": 32,\n\t\"gender\": \"m\",\n\t\"city\": \"Paris\",\n\t\"phone\": \"0606060606\",\n\t\"image_profil\": \"https://www.mediacritik.com/wp-content/uploads/2019/04/rs_1024x759-170407142939-1024.Peter-Dinklage-Game-of-Thrones.kg_.040717.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"create"
+							]
+						},
+						"description": "create -> one user"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/user/update/0",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "\"1234\"",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"xzen769@gmail.com\",\n\t\"phone\": \"060606666666\",\n\t\"image_profil\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/update/5e667cf862a6c52f67b3d9d8",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"update",
+								"5e667cf862a6c52f67b3d9d8"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "12483hdhd2838",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/user/delete/0",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "1234",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/user/delete/5e667c8f62a6c52f67b3d9d7",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"delete",
+								"5e667c8f62a6c52f67b3d9d7"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5e667cf862a6c52f67b3d9d8",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/user/show/7",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "167ea17b-ae74-4fa8-89cf-bda6f22a4b91",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "\"1234\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/user/show/5e667cf862a6c52f67b3d9d8",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"show",
+								"5e667cf862a6c52f67b3d9d8"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "\"1234\"",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "5e667cf862a6c52f67b3d9d8",
+									"disabled": true
+								}
+							]
+						},
+						"description": "get --> one user"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/user/list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/user/list",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "groups",
+			"item": [
+				{
+					"name": "localhost:3000/group/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \t\"name\": \"Les mauvais amis\",\r\n  \t\"description\": \"des zamis\",\r\n  \t\"creator_id\": \"5e66792262a6c52f67b3d9d6\",\r\n  \t\"admins\": [{\"user_id\": \"5e66792262a6c52f67b3d9d6\"}],\r\n  \t\"users\": [{\"user_id\": \"5e66792262a6c52f67b3d9d6\"}],\r\n  \t\"group_type\": \"public\",\r\n  \t\"allow_user_publish\": true,\r\n  \t\"allow_user_event\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/group/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"group",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/group/show/5e66927a24ef3931fb1cfd7b",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/group/show/5e66927a24ef3931fb1cfd7b",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"group",
+								"show",
+								"5e66927a24ef3931fb1cfd7b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/group/delete/5e66927a24ef3931fb1cfd7b",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/group/delete/5e66927a24ef3931fb1cfd7b",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"group",
+								"delete",
+								"5e66927a24ef3931fb1cfd7b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/group/update/5e66927a24ef3931fb1cfd7b",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \t\"allow_user_publish\": false,\r\n  \t\"allow_user_event\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/group/update/5e66927a24ef3931fb1cfd7b",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"group",
+								"update",
+								"5e66927a24ef3931fb1cfd7b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/group/list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/group/list",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"group",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "events",
+			"item": [
+				{
+					"name": "localhost:3000/event/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n  \"creator_id\": \"5e66792262a6c52f67b3d9d6\",\r\n  \"admins\": [{\"user_id\": \"5e66792262a6c52f67b3d9d6\"}],\r\n  \"participants\": [{\"user_id\": \"5e66792262a6c52f67b3d9d6\"}],\r\n  \"group_id\": \"5e66927a24ef3931fb1cfd7b\",\r\n  \"name\": \"waou la super fete\",\r\n  \"description\": \"la super mega fete\",\r\n  \"tickets\": false,\r\n  \"begin_date\": \"04 Dec 1995 00:12:00 GMT\",\r\n  \"end_date\": \"04 Dec 1995 00:12:00 GMT\",\r\n  \"street_num\": 90,\r\n  \"street_name\": \"wunderbar kartofelsalad strasse\",\r\n  \"city\": \"Berlin\",\r\n  \"zip_code\": \"32158\",\r\n  \"country\": \"Deutschland uber alles\",\r\n  \"cover_picture\": \"https://www.g33kmania.com/wp-content/uploads/Tyrion-Lannister-400x400.jpg\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/event/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"event",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/event/show/5e669965edf7f932cc50e381",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/event/show/5e669965edf7f932cc50e381",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"event",
+								"show",
+								"5e669965edf7f932cc50e381"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/event/delete/5e669965edf7f932cc50e381",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/event/delete/5e669965edf7f932cc50e381",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"event",
+								"delete",
+								"5e669965edf7f932cc50e381"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/event/update/5e669965edf7f932cc50e381",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"description\": \"this party sucks\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/event/update/5e669965edf7f932cc50e381",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"event",
+								"update",
+								"5e669965edf7f932cc50e381"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/event/list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/event/list",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"event",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "chats",
+			"item": [
+				{
+					"name": "localhost:3000/chat/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n  \t\"group_id\": \"5e66927a24ef3931fb1cfd7b\",\r\n  \"users\": [\r\n    {\r\n      \"user_id\": \"5e66792262a6c52f67b3d9d6\"\r\n    }\r\n  ],\r\n  \"messages\": [\r\n    {\r\n      \"user_id\": \"5e66792262a6c52f67b3d9d6\",\r\n      \"content\": \"I discovered the chalk drawer\",\r\n      \"comments\": [\r\n        {\r\n          \"user_id\": \"5e66792262a6c52f67b3d9d6\",\r\n          \"content\": \"Waw brilliant!\"\r\n        }\r\n      ]\r\n    }\r\n  ],\r\n  \"description\": \"Some pals chatting\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/chat/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"chat",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/chat/show/5e66a3fd03af3133c3f35b3b",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/chat/show/5e66a3fd03af3133c3f35b3b",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"chat",
+								"show",
+								"5e66a3fd03af3133c3f35b3b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/chat/update/5e66a3fd03af3133c3f35b3b",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t  \"messages\": [\n    {\n      \"user_id\": \"5e66792262a6c52f67b3d9d6\",\n      \"content\": \"I discovered the chalk drawer\",\n      \"comments\": [\n        {\n          \"user_id\": \"5e66792262a6c52f67b3d9d6\",\n          \"content\": \"Waw brilliant!\"\n        },\n        {\n          \"user_id\": \"5e66792262a6c52f67b3d9d6\",\n          \"content\": \"such discovery!\"\n        }\n      ]\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/chat/update/5e66a3fd03af3133c3f35b3b",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"chat",
+								"update",
+								"5e66a3fd03af3133c3f35b3b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/chat/delete/5e66a3fd03af3133c3f35b3b",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/chat/delete/5e66a3fd03af3133c3f35b3b",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"chat",
+								"delete",
+								"5e66a3fd03af3133c3f35b3b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/chat/list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/chat/list",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"chat",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "albums",
+			"item": [
+				{
+					"name": "localhost:3000/album/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n  \"event_id\": \"5e669965edf7f932cc50e381\",\r\n  \"description\": \"Some ducks\",\r\n  \"pictures\": [\r\n    {\r\n      \"path\": \"https://rcf.fr/sites/default/static.rcf.fr/radios/rcfnational/visuels/canard-161631.jpg\", \r\n      \"description:\": \"A wonderfull duck\"\r\n    }\r\n  ]\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/album/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"album",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/album/show/5e66a58992eeda33f12664a9",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/album/show/5e66a58992eeda33f12664a9",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"album",
+								"show",
+								"5e66a58992eeda33f12664a9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/album/delete/5e66a58992eeda33f12664a9",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/album/delete/5e66a58992eeda33f12664a9",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"album",
+								"delete",
+								"5e66a58992eeda33f12664a9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/album/update/5e66a58992eeda33f12664a9",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n\t\"description\": \"Some ducks\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/album/update/5e66b16b4431e3356471ef16",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"album",
+								"update",
+								"5e66b16b4431e3356471ef16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/album/list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/album/list",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"album",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
